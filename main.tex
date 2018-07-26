@@ -82,11 +82,11 @@
 %%
 \correspondingauthor{Nell Byler}
 \email{nell.byler@anu.edu.au}
-%% 
+%%
 \author[0000-0002-7392-3637]{Nell Byler}
 \affil{Research School of Astronomy and Astrophysics, The Australian National University, ACT, Australia}
 \affil{ARC Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D), Australia}
-%% 
+%%
 \author[0000-0001-8152-3943]{Lisa Kewley}
 \affil{Research School of Astronomy and Astrophysics, The Australian National University, ACT, Australia}
 \affil{ARC Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D), Australia}
@@ -127,7 +127,7 @@ However, ensuring that UV and optical emission line diagnostics predict consiste
 
 There has been significant effort in compiling samples of galaxies with rest-UV and rest-optical spectroscopy in recent years. Locally, \citet{Berg+2016} and \citet{Senchyna+2017} have used HST Cosmic Origin Spectrograph (COS) to obtain rest-UV spectroscopy for galaxies with existing optical SDSS spectroscopy. Samples are still small (of order 10-30 objects), because it is difficult to predict the S/N of UV emission lines without preliminary UV spectra. \citet{Berg+2016} found that UV emission line detections did not correlate with UV magnitudes, optical emission line fluxes, or reddening. \citet{Berg+2016} did find that the presence of UV emission lines did seem to correlate with excitation, with significant detections more likely to be found in higher excitation objects.
 
-Above $z\gtrsim 1$, the rest-UV can be observed at optical and IR wavelengths, where there are many more instrument options. However, the improved observational access comes at the expense of detectability, since distant galaxies are, in general, fainter. Thus, rest-UV spectroscopic surveys of high-redshift objects have generally taken three approaches: (1) probe extreme objects that are luminous enough for direct detection \citep[e.g., ][]{Erb+2010, Stark+2014}, or (2) target galaxies that have been magnified via gravitational lensing \citep[e.g.,][]{Rigby+2018a}, (3) create composite spectra from stacks of individual galaxy spectra \citep[e.g.,][]{Shapley+2003, Steidel+2016}. The calibration of UV metallicity diagnostics should be based on spectra from individual galaxies, since stacking can be influenced by outliers, and we thus focus on the first two approaches. Both approaches, however, rely on objects with relatively rare properties, and sample sizes are still relatively small, of order 10-20 galaxies. 
+Above $z\gtrsim 1$, the rest-UV can be observed at optical and IR wavelengths, where there are many more instrument options. However, the improved observational access comes at the expense of detectability, since distant galaxies are, in general, fainter. Thus, rest-UV spectroscopic surveys of high-redshift objects have generally taken three approaches: (1) probe extreme objects that are luminous enough for direct detection \citep[e.g., ][]{Erb+2010, Stark+2014}, or (2) target galaxies that have been magnified via gravitational lensing \citep[e.g.,][]{Rigby+2018a}, (3) create composite spectra from stacks of individual galaxy spectra \citep[e.g.,][]{Shapley+2003, Steidel+2016}. The calibration of UV metallicity diagnostics should be based on spectra from individual galaxies, since stacking can be influenced by outliers, and we thus focus on the first two approaches. Both approaches, however, rely on objects with relatively rare properties, and sample sizes are still relatively small, of order 10-20 galaxies.
 
 In this work, we calibrate UV emission line diagnostics presented in \citet{Byler+2018} using a sample of local galaxies ($z < 1$) and moderate-redshift galaxies ($z=2-3$) with rest-UV and rest-optical spectra.
 We determine UV and optical metallicities and identify UV emission line diagnostics that are most consistent with optical properties. For future studies where only rest-UV spectroscopy is available, this comparison provides a crucial link between abundances derived using UV emission lines and optical emission lines.
@@ -139,7 +139,7 @@ The structure of the paper is as follows. We describe the stellar and nebular mo
 
 \subsection{Stellar Model} \label{sec:model:stars}
 
-For stellar population synthesis, we use the Flexible Stellar Population Synthesis package \citep[\FSPS;][]{Conroy+2009, Conroy+2010} via the Python interface, \pFSPS \citep{pythonFSPSdfm}. 
+For stellar population synthesis, we use the Flexible Stellar Population Synthesis package \citep[\FSPS;][]{Conroy+2009, Conroy+2010} via the Python interface, \pFSPS \citep{pythonFSPSdfm}.
 
 We use the MESA Isochrones \& Stellar Tracks \citep[MIST;][]{Dotter+2016, Choi+2016}, single-star stellar evolutionary models which include the effect of stellar rotation. The evolutionary tracks are computed using the publicly available stellar evolution package Modules for Experiments in Stellar Astrophysics \citep[MESA v7503;][]{Paxton+2011,Paxton+2013, Paxton+2015} and the isochrones are generated using Aaron Dotter's publicly available \texttt{iso} package on github\footnote{https://github.com/dotbot2000/iso}.
 
@@ -154,9 +154,9 @@ We use the \Cloudy nebular model implemented within \FSPS, \CloudyFSPS \citep{cl
 
 The nebular model is a grid in (1) simple stellar population (SSP) age, (2) SSP and gas-phase metallicity, and (3) ionization parameter, \U, a dimensionless quantity that gives the ratio of ionizing photons to the total hydrogen density.
 
-The model uses \FSPS to generate spectra from coeval clusters of stars, each with a single age and metallicity (SSPs). Using the photoionization code \Cloudy, the SSP is used as the ionization source for the gas cloud and the gas-phase metallicity is scaled to the metallicity of the SSP. For each SSP of age $t$ and metallicity $Z$, photoionization models are run at different ionization parameters, \U, from \logUeq{-4} to \logUeq{-1} in steps of 0.5. 
+The model uses \FSPS to generate spectra from coeval clusters of stars, each with a single age and metallicity (SSPs). Using the photoionization code \Cloudy, the SSP is used as the ionization source for the gas cloud and the gas-phase metallicity is scaled to the metallicity of the SSP. For each SSP of age $t$ and metallicity $Z$, photoionization models are run at different ionization parameters, \U, from \logUeq{-4} to \logUeq{-1} in steps of 0.5.
 
-We assume that the gas phase metallicity scales with the metallicity of the stellar population, given that the metallicity of the most massive stars should be identical to the metallicity of the gas cloud from which the stars formed. 
+We assume that the gas phase metallicity scales with the metallicity of the stellar population, given that the metallicity of the most massive stars should be identical to the metallicity of the gas cloud from which the stars formed.
 
 For most elements we use the solar abundances from \citet{Grevesse+2010}, based on the results from \citet{Asplund+2009}, and adopt the depletion factors specified by \citet{Dopita+2013}. To set the relationship between N/H and O/H we use the following equation:
 \begin{equation}\label{eq:nitrogen}
@@ -229,7 +229,7 @@ We compare our UV and optical models to two observational samples: (1) local gal
 We use the $N = 15$ bright, strongly lensed galaxies from Project \mage: the Magellan Evolution of Galaxies Spectroscopic and Ultraviolet Reference Atlas \citep{Rigby+2018a, Rigby+2018b}, spanning the redshift range $1.68 < z < 3.6$.
 
 The \mage galaxies have rest-UV spectroscopy taken with the MagE instrument on the \emph{Magellan} telescopes.
-The spectra cover the wavelength range ($3200 < \lambda < 8280$\ang in the observed frame; approximately $1000 \lesssim \lambda \lesssim 3000$\ang in the rest frame) with average spectral resolving power of R$\sim3300$. The spectra are relatively high signal-to-noise (S/N=21 per resolution element in the median spectrum), compared to what can be achieved with COS/HST. 
+The spectra cover the wavelength range ($3200 < \lambda < 8280$\ang in the observed frame; approximately $1000 \lesssim \lambda \lesssim 3000$\ang in the rest frame) with average spectral resolving power of R$\sim3300$. The spectra are relatively high signal-to-noise (S/N=21 per resolution element in the median spectrum), compared to what can be achieved with COS/HST.
 
 Two of the \mage galaxies are suspected to harbor a low luminosity AGN (SGAS J224324.2 − 093508 and SGAS 003341.5 + 024217); we do not include these galaxies in our analysis, bringing the total number of objects in the high-redshift sample to $N=13$.
 
@@ -245,7 +245,7 @@ For the local BCD comparisons samples, we use the published emission line flux m
 
 For the lensed galaxy sample, we use the published emission line fluxes from \citet{Erb+2010}, \citet{Christensen+2012}, \citet{Stark+2014}, and \citet{Berg+2018}.
 
-We use currently unpublished emission line fluxes for the \mage galaxies. The emission line fitting process is described in detail in Acharyya et al., (\emph{in prep}), which we briefly summarize here. The continuum is fit using an automatic routine that first masks the spectrum at the positions of expected spectral features (which includes emission and absorption lines in addition to known intervening absorption systems), and then applies boxcar smoothing. The resulting continuum is nearly identical to the hand-fit spline process described in \citet{Rigby+2018a}. 
+We use currently unpublished emission line fluxes for the \mage galaxies. The emission line fitting process is described in detail in Acharyya et al., (\emph{in prep}), which we briefly summarize here. The continuum is fit using an automatic routine that first masks the spectrum at the positions of expected spectral features (which includes emission and absorption lines in addition to known intervening absorption systems), and then applies boxcar smoothing. The resulting continuum is nearly identical to the hand-fit spline process described in \citet{Rigby+2018a}.
 
 Emission lines are fit to the continuum-normalized spectrum. Gaussian profiles are fit to each emission line in the line list using {\tt scipy.optimize.curve\_fit}; neighboring emission lines (lines within $\pm 5$ spectral elements) are fit simultaneously. Initial guesses for line centers are calculated by redshifting the emission line vacuum wavelength to the nebular redshift, calculated in \citet{Rigby+2018a} using the \ciii$\lambda$1906,1909 lines. Limits on the center of the Gaussian profile are set to $\lambda \pm 3\sigma$, where $\sigma$ is the uncertainty on the nebular redshift. The width of the Gaussian profile has lower and upper limits of d$\lambda$ (one spectral resolution element) and 300\kms, respectively.
 
@@ -255,6 +255,82 @@ For each emission line flux, $f_{\mathrm{line}}$, we determine the significance 
 
 
 \section{Metallicity determinations}\label{sec:model:Te}
+
+\subsection{Direct-temperature metallicities}
+
+For the closest comparison with the observational samples, we calculate direct-\Te abundanes following the method used in \citet{Berg+2015} and applied to the \citet{Berg+2016} observations. We breifly describe the process below.
+
+We calculate gas phase oxygen abundances using a two temperature zone approximation with {\tt PyNeb} \citep{PyNeb} and collision strengths from \citet{Aggarwal+1999}. We use the \citet{Aggarwal+1999} collision strengths rather than the newer \citet{Storey+2014} collision strengths, since the \citet{Aggarwal+1999} collision strengths are calculated for a six-level oxygen atom, needed for the UV \oiii$\,\lambda$1661,1666 lines (${}^5\mathrm{S}_2 \rightarrow {}^3\mathrm{P}_2$ and ${}^5\mathrm{S}_2 \rightarrow {}^3\mathrm{P}_1$ transitions, respectively).  We briefly go through the established practice for optical direct temperature abundances before exploring comparable UV measurements.
+
+\paragraph{Optical direct-\Te metallicities}
+Following \citet{Garnett+1999, Berg+2015}, we approximate the \hii region with a high and low temperature zone for the $\mathrm{O}^{++}$ and $\mathrm{O}^{+}$ regions, respectively.
+
+For the O$^{+}$ zone, we calculate the density using the \sii$\,\lambda 6731$ / \sii$\,\lambda 6716$ ratio. For the O$^{+}$ zone temperature, we use the (\nii$\,\lambda$6548 $+$ \nii$\,\lambda$ 6584 ) / \nii$\,\lambda 5755$ following the recommendation of \citet{Berg+2015}. The O$^{+}$ ionic abundance is then calculated with {\tt PyNeb}, using the line intensities:
+\begin{equation}
+    \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 3727 + \mathrm{I}\,\lambda 3729 + \mathrm{I}\,\lambda 7319 + \mathrm{I}\,\lambda 7332}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}
+\end{equation}
+
+For the O$^{++}$ zone, we calculate the density using the \sii$\,\lambda 6731$ / \sii$\,\lambda 6716$ ratio. For the O$^{++}$ zone temperature, we use the \oiii$\lambda$4363/(\oiii$\lambda$4959 + \oiii$\lambda$5007) ratio. The O$^{++}$ ionic abundance is then calculated with {\tt PyNeb}, using the line intensities:
+\begin{equation}
+    \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 4363 + \mathrm{I}\,\lambda 4959 + \mathrm{I}\,\lambda 5007}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}.
+\end{equation}
+
+The total oxygen abundance is then calculated as the sum of the ionic abundances:
+\begin{equation}
+    \log_{10}(\mathrm{O}/\mathrm{H}) = \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] + \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right] ,
+\end{equation}
+
+assuming a negligible contribution from O$^{+++}$ ions, which is appropriate at most \hii region temperatures.
+
+\paragraph{UV direct-\Te metallicities}
+The direct-temperature method relies on the use of collisionally excited transitions with a difference in energy of order $k T_{e}$. The two transitions are populated by electron-ion collisions, and the relative population in each energy level will thus depend directly on the electron temperature of the gas. In the optical, the temperature leverage comes from the combination of the ${}^1 \mathrm{S}_0$ to ${}^1 \mathrm{D}_2$ transition ($\lambda$4363) with the  ${}^1 \mathrm{D}_2$ to ${}^3 \mathrm{P}_2$ ($\lambda$5007) transition (often with the addition of the ${}^1\mathrm{D}_2$ to $^3\mathrm{P}_1$ transition at $\lambda$4959).
+
+Similar transitions exist in the UV portion of the spectrum, making it possible to derive direct method metallicities using only UV emission lines. In the UV the temperature leverage comes from the combination of the ${}^5 \mathrm{S}_2 \rightarrow {}^3 \mathrm{P}_2$ ($\lambda$1666) and the ${}^1 \mathrm{S}_0 \rightarrow {}^3 \mathrm{P}_1$ ($\lambda$2321) transition. For the O$^{+}$ zone, the temperature-sensitive transitions are the ${}^2 \mathrm{P}_{1/2} \rightarrow {}^4 \mathrm{S}_{3/2}$ ($\lambda$2471) and the ${}^2 \mathrm{D}_{3/2} \rightarrow {}^4 \mathrm{S}_{3/2}$ ($\lambda$3727) transition. It is worth noting that the the \oii$\,\lambda2471$ and \oiii$\,\lambda2321$ lines are very weak (\oii$\,\lambda2471$ is ${\sim}6$\% of the \oii$\lambda$3727 line strength and \oiii$\,\lambda2321$ is ${\sim}2$\% of the \oiii$\lambda$4959 line strength), and have only been detected in a handful of galaxies.
+
+Using the same methodology as for the optical direct-temperature method, we must find temperatures and densities for the O$^{+}$ and O$^{++}$ zones. There are a number of density-sensitive line combinations in the UV, however, the brightest line combinations, \ciii$\lambda$1906,1909 and \SiuIII$\lambda$1883,1892 are not sensitive to densities below $\sim10^3\,$cm$^{-3}$. We assume $n_{\mathrm{e}} = 100$ cm$^{-3}$, the true density of the \Cloudy models. We note, however, that the use of densities calculated from \ciii and \SiuIII ratios changes the resultant oxygen abundance by less than 0.1 dex, and is thus not a significant source of error.
+
+The temperature of the O$^{+}$ zone is calculated using the (\oii$\,\lambda$2471) / (\oii$\,\lambda 3727$ + \oii$\,\lambda 3729$) ratio. The ionic abundance for O$^{+}$ is calculated with {\tt PyNeb} using:
+\begin{equation}
+    \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 2471 +\mathrm{I}\,\lambda 3727 + \mathrm{I}\,\lambda 3729}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}.
+\end{equation}
+
+The temperature of the O$^{++}$ zone is calculated using \oiii$\,\lambda1666$ / \oiii$\,\lambda2321$ ratio. The total ionic abundance for O$^{++}$ is calculated with {\tt PyNeb} using:
+\begin{equation}
+    \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 1666 +\mathrm{I}\,\lambda 2321}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}.
+\end{equation}
+
+The total oxygen abundance is then calculated as the sum of the ionic abundances:
+\begin{equation}
+    \log_{10}(\mathrm{O}/\mathrm{H}) = \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] + \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right],
+\end{equation}
+again, assuming a negligible contribution from O$^{+++}$ ions.
+
+\subsubsection{Comparison of UV and optical direct-\Te metallicities}
+
+In Fig.~\ref{fig:UVoptZ}, we show direct-temperature metallicity calculations in the optical ($x$-axis) and the UV ($y$-axis) from two different photoionization models, Cloudy \citep[circles;][]{Byler+2018} and MAPPINGS (squares; Kewley, \emph{submitted}). The two models produce very similar predictions for both UV and optical metallicities, with UV metallicities systematically lower than the optically derived metallicities by $\sim0.2$\,dex. It is encouraging to see that the UV and optically derive metallicities are correlated, despite the overall offset. We note that the \oii$\,\lambda$2471 and \oiii$\,\lambda2321$ lines are quite weak and difficult to observe, and thus large samples of direct-method metallicities in the UV are unlikely.
+
+Unfortunately, the weak \oii$\,\lambda$2471 and \oiii$\,\lambda2321$ lines are the temperature anchors in the UV, and abundance determinations that only use the \oiii$\,\lambda$1661,1666 or \oii$\,\lambda$3727,3729 emission lines are far less accurate. In the regime where observations of  \oiii$\,\lambda$1661,1666, \oiii$\,\lambda$2471, \oii$\,\lambda$2471, and \oii$\,\lambda$3727,3729 are not simultaneously possible, we must resort to semi-empirical strong line calibrations or diagnostic diagrams.
+
+%-------------------------------------------------------
+% Figure 1:
+%-------------------------------------------------------
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=\linewidth]{figs/f1.png}
+    \caption{Comparison of direct-method metallicities in the optical direct-method metallicities in the UV. Circular markers show predictions from the Cloudy photoionization code while star markers show predictions from the Mappings photoionization code. Color indicates the input gas-phase oxygen abundance and the black dashed line shows a one-to-one correlation. While the UV direct-temperature calculation systematically predicts lower metallicities than the optical direct-method calculation, the predictions are correlated.}
+    \label{fig:UVoptZ}
+  \end{center}
+\end{figure}
+%-------------------------------------------------------
+
+\subsection{Strong-line metallicities}
+
+The \mage galaxies and the other lensed galaxies  have optical metallicities based on strong line methods, which have been converted to the ``standard'' \citet{Pettini+2004} (hereafter PP04) N2O2 abundance scale using the empirical calibration from \citet{Kewley+2008}. We compute N2O2 strong line abundances for our model grid using the equation from PP04:
+
+\begin{equation}
+12 + \logOH = 8.90 + 0.57 \times \log_{10}(\mathrm{[N\,II]}/\mathrm{H}\alpha)
+\end{equation}
+
 
 \subsection{Theoretical metallicity calibration}\label{sec:model:corr}
 
@@ -278,85 +354,24 @@ We show the resultant theoretical abundance calibration for constant SFR models 
 \end{figure*}
 %-------------------------------------------------------
 
+\subsection{Deriving abundances from UV diagnostic diagrams}\label{sec:Z:UV}
+We use various combinations of predicted emission line ratios to construct diagnostic diagrams. At a given model age, variations in ionization parameter and gas phase abundances change the emission line ratios, producing a surface in the diagnostic diagram. Then, for each galaxy, we can compare the observed emission line ratios to the model emission line ratios to to infer the gas phase abundance. Specifically, the emission line ratios ($x$, $y$) for a given galaxy are matched to the surface of the model grid by smoothly interpolating between points in ionization parameter and metallicity.
 
+This approach can be sensitive to slight shifts in the observed emission line ratios, so we use a Monte-Carlo method to estimate errors on this UV-derived metallicity. For each object, we draw $N=1000$ samples from a gaussian distribution centered at the observed $x$,$y$ coordinate  with width equal to the reported emission line ratio errors. We re-measure the metallicity at each of these 1000 samples, using the median of the resultant metallicity distribution as the final UV-derived metallicity. The 16$^{th}$ and 84$^{th}$ percentiles of the metallicity distribution then provide the upper and lower error limits, respectively.
 
-We calculate gas phase oxygen abundances using a two temperature zone approximation with {\tt PyNeb} \citep{PyNeb} and collision strengths from \citet{Aggarwal+1999}. We use the \citet{Aggarwal+1999} collision strengths rather than the newer \citet{Storey+2014} collision strengths, since the \citet{Aggarwal+1999} collision strengths are calculated for a six-level oxygen atom, needed for the UV \oiii$\,\lambda$1661,1666 lines (${}^5\mathrm{S}_2 \rightarrow {}^3\mathrm{P}_2$ and ${}^5\mathrm{S}_2 \rightarrow {}^3\mathrm{P}_1$ transitions, respectively).  We briefly go through the established practice for optical direct temperature abundances before exploring comparable UV measurements.
-
-\paragraph{Direct-\Te metallicities in the optical}
-Following \citet{Garnett+1999, Berg+2015}, we approximate the \hii region with a high and low temperature zone for the $\mathrm{O}^{++}$ and $\mathrm{O}^{+}$ regions, respectively. 
-
-For the O$^{+}$ zone, we calculate the density using the \sii$\,\lambda 6731$ / \sii$\,\lambda 6716$ ratio. For the O$^{+}$ zone temperature, we use the (\nii$\,\lambda$6548 $+$ \nii$\,\lambda$ 6584 ) / \nii$\,\lambda 5755$ following the recommendation of \citet{Berg+2015}. The O$^{+}$ ionic abundance is then calculated with {\tt PyNeb}, using the line intensities:
-\begin{equation}
-    \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 3727 + \mathrm{I}\,\lambda 3729 + \mathrm{I}\,\lambda 7319 + \mathrm{I}\,\lambda 7332}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}
-\end{equation}
-
-For the O$^{++}$ zone, we calculate the density using the \sii$\,\lambda 6731$ / \sii$\,\lambda 6716$ ratio. For the O$^{++}$ zone temperature, we use the \oiii$\lambda$4363/(\oiii$\lambda$4959 + \oiii$\lambda$5007) ratio. The O$^{++}$ ionic abundance is then calculated with {\tt PyNeb}, using the line intensities:
-\begin{equation}
-    \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 4363 + \mathrm{I}\,\lambda 4959 + \mathrm{I}\,\lambda 5007}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}. 
-\end{equation}
-
-The total oxygen abundance is then calculated as the sum of the ionic abundances:
-\begin{equation}
-    \log_{10}(\mathrm{O}/\mathrm{H}) = \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] + \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right] ,
-\end{equation}
-
-assuming a negligible contribution from O$^{+++}$ ions, which is appropriate at most \hii region temperatures.
-
-\paragraph{Direct-\Te metallicities in the UV}
-The direct-temperature method relies on the use of collisionally excited transitions with a difference in energy of order $k T_{e}$. The two transitions are populated by electron-ion collisions, and the relative population in each energy level will thus depend directly on the electron temperature of the gas. In the optical, the temperature leverage comes from the combination of the ${}^1 \mathrm{S}_0$ to ${}^1 \mathrm{D}_2$ transition ($\lambda$4363) with the  ${}^1 \mathrm{D}_2$ to ${}^3 \mathrm{P}_2$ ($\lambda$5007) transition (often with the addition of the ${}^1\mathrm{D}_2$ to $^3\mathrm{P}_1$ transition at $\lambda$4959).
-
-Similar transitions exist in the UV portion of the spectrum, making it possible to derive direct method metallicities using only UV emission lines. In the UV the temperature leverage comes from the combination of the ${}^5 \mathrm{S}_2 \rightarrow {}^3 \mathrm{P}_2$ ($\lambda$1666) and the ${}^1 \mathrm{S}_0 \rightarrow {}^3 \mathrm{P}_1$ ($\lambda$2321) transition. For the O$^{+}$ zone, the temperature-sensitive transitions are the ${}^2 \mathrm{P}_{1/2} \rightarrow {}^4 \mathrm{S}_{3/2}$ ($\lambda$2471) and the ${}^2 \mathrm{D}_{3/2} \rightarrow {}^4 \mathrm{S}_{3/2}$ ($\lambda$3727) transition. It is worth noting that the the \oii$\,\lambda2471$ and \oiii$\,\lambda2321$ lines are very weak (\oii$\,\lambda2471$ is ${\sim}6$\% of the \oii$\lambda$3727 line strength and \oiii$\,\lambda2321$ is ${\sim}2$\% of the \oiii$\lambda$4959 line strength), and have only been detected in a handful of galaxies.
-
-Using the same methodology as for the optical direct-temperature method, we must find temperatures and densities for the O$^{+}$ and O$^{++}$ zones. There are a number of density-sensitive line combinations in the UV, however, the brightest line combinations, \ciii$\lambda$1906,1909 and \SiuIII$\lambda$1883,1892 are not sensitive to densities below $\sim10^3\,$cm$^{-3}$. We assume $n_{\mathrm{e}} = 100$ cm$^{-3}$, the true density of the \Cloudy models. We note, however, that the use of densities calculated from \ciii and \SiuIII ratios changes the resultant oxygen abundance by less than 0.1 dex, and is thus not a significant source of error.
-
-The temperature of the O$^{+}$ zone is calculated using the (\oii$\,\lambda$2471) / (\oii$\,\lambda 3727$ + \oii$\,\lambda 3729$) ratio. The ionic abundance for O$^{+}$ is calculated with {\tt PyNeb} using:
-\begin{equation}
-    \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 2471 +\mathrm{I}\,\lambda 3727 + \mathrm{I}\,\lambda 3729}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}.
-\end{equation}
-
-The temperature of the O$^{++}$ zone is calculated using \oiii$\,\lambda1666$ / \oiii$\,\lambda2321$ ratio. The total ionic abundance for O$^{++}$ is calculated with {\tt PyNeb} using:
-\begin{equation}
-    \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right] = \frac{\mathrm{I}\,\lambda 1666 +\mathrm{I}\,\lambda 2321}{\mathrm{I}\,\mathrm{H}\beta} \cdot \frac{j_{\mathrm{H}\beta}}{j_{\lambda}}.
-\end{equation}
-
-The total oxygen abundance is then calculated as the sum of the ionic abundances:
-\begin{equation}
-    \log_{10}(\mathrm{O}/\mathrm{H}) = \left[ \frac{\mathrm{O}^{++}}{\mathrm{H}^{+}} \right] + \left[ \frac{\mathrm{O}^{+}}{\mathrm{H}^{+}} \right],
-\end{equation}
-again, assuming a negligible contribution from O$^{+++}$ ions.
-
-\subsection{Comparison of UV and optical direct-\Te metallicities}
-
-In Fig.~\ref{fig:UVoptZ}, we show direct-temperature metallicity calculations in the optical ($x$-axis) and the UV ($y$-axis) from two different photoionization models, Cloudy \citep[circles;][]{Byler+2018} and MAPPINGS (squares; Kewley, \emph{submitted}). The two models produce very similar predictions for both UV and optical metallicities, with UV metallicities systematically lower than the optically derived metallicities by $\sim0.2$\,dex. It is encouraging to see that the UV and optically derive metallicities are correlated, despite the overall offset. We note that the \oii$\,\lambda$2471 and \oiii$\,\lambda2321$ lines are quite weak and difficult to observe, and thus large samples of direct-method metallicities in the UV are unlikely.
-
-Unfortunately, the weak \oii$\,\lambda$2471 and \oiii$\,\lambda2321$ lines are the temperature anchors in the UV, and abundance determinations that only use the \oiii$\,\lambda$1661,1666 or \oii$\,\lambda$3727,3729 emission lines are far less accurate. In the regime where observations of  \oiii$\,\lambda$1661,1666, \oiii$\,\lambda$2471, \oii$\,\lambda$2471, and \oii$\,\lambda$3727,3729 are not simultaneously possible, we must resort to semi-empirical strong line calibrations or diagnostic diagrams.
-
-%-------------------------------------------------------
-% Figure 1:
-%-------------------------------------------------------
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=\linewidth]{figs/f1.png}
-    \caption{Comparison of direct-method metallicities in the optical direct-method metallicities in the UV. Circular markers show predictions from the Cloudy photoionization code while star markers show predictions from the Mappings photoionization code. Color indicates the input gas-phase oxygen abundance and the black dashed line shows a one-to-one correlation. While the UV direct-temperature calculation systematically predicts lower metallicities than the optical direct-method calculation, the predictions are correlated.}
-    \label{fig:UVoptZ}
-  \end{center}
-\end{figure}
-%-------------------------------------------------------
-
+This metallicity corresponds to the absolute gas phase abundance from \Cloudy. However, if we want to compare the UV-derived metallicity with the metallicity derived from optical emission lines, we need to rescale the \Cloudy metallicity according to our theoretical abundance calibrations from \S\ref{sec:model:corr}. For the \citet{Berg+2016} galaxies  with optical direct-\Te metallicities, we apply the direct-\Te correction described in \S\ref{sec:model:corr}. For the \mage galaxies with optical strong line metallicities, we apply the relevant strong line correction described in \S\ref{sec:model:corr}. In general, the metallicity correction changes the UV-derived abundance by $<0.1$\,dex at $12 + \logOH < 8$, and by ${\sim}0.1$\,dex at $8.0 < 12 + \logOH < 8.5$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{UV-Optical comparisons}\label{sec:UVOpt}
+\section{Abundance comparisons}\label{sec:UVOpt}
 
-In this section, we present several UV diagnostic diagrams and use them to derive metallicities. We then compare these UV metallicities to optical metallicities and evaluate the utility of each diagnostic. Before discussing the results from the various diagnostic diagrams, we briefly describe the method used to derive metallicities from each diagnostic grid. 
+\subsection{UV-Optical abundance comparisons}
 
-Each galaxy observation is matched to the surface of the model diagnostic grid by smoothly interpolating between model grid points in ionization parameter and metallicity. We use a Monte-Carlo method to calculate UV metallicities and errors. For each object we draw $N=1000$ samples from a gaussian distribution centered at the observed $x$,$y$ coordinate with width equal to the reported errors, and re-measure the metallicity at each of these new coordinates. We use the median and the standard deviation of the metallicity distribution to estimate the metallicity and error in metallicity for each object, respectively. 
+In this section we compare the metallicities derived from UV diagnostic diagrams (\S\ref{sec:Z:UV}) with metallicities derived using optical emission lines and evaluate the utility of the UV diagnostic diagrams as metallicity indicators.
 
-This metallicity corresponds to the absolute gas phase abundance from \Cloudy, which must be rescaled before it can be accurately compared to the optical metallicity. For the \citet{Berg+2016} galaxies with optical direct-\Te metallicities, we apply the direct-\Te correction described in \S\ref{sec:model:corr}. For the \mage galaxies with optical metallicities calculated from empirically calibrated strong line methods, we apply the relevant strong line correction described in \S\ref{sec:model:corr}. In general, the metallicity correction changes the UV-derived abundance by $<0.1$\,dex at $12 + \logOH < 8$, and by ${\sim}0.1$\,dex at $8.0 < 12 + \logOH < 8.5$.
+\subsubsection{Diagnostics using \ciii$\lambda$1906,1909}\label{sec:UVOpt:C}
 
-\subsection{Diagnostics using \ciii$\lambda$1906,1909}\label{sec:UVOpt:C}
-
-\ciii$\lambda$1906,1909 are the brightest emission lines after Ly-$\alpha$ in the UV spectra of star-forming galaxies, which makes the lines desirable candidates to use in emission line diagnostics. Several analyses of UV emission line spectra have suggested diagnostics using \ciii$\lambda$1906,1909, including \citet{Feltre+2016, Jaskot+2016, Byler+2018}. In \citet{Byler+2018}, we highlighted the potential of the Si3C3 \vs O3C3 diagnostic diagram, which uses the \SiuIII$\lambda$1883, \ciii$\lambda$1906, and \oiii$\lambda$1666 emission lines. These emission lines are relatively bright and easy to detect, and are closely spaced in wavelength to minimize dust extinction errors. 
+\ciii$\lambda$1906,1909 are the brightest emission lines after Ly-$\alpha$ in the UV spectra of star-forming galaxies, which makes the lines desirable candidates to use in emission line diagnostics. Several analyses of UV emission line spectra have suggested diagnostics using \ciii$\lambda$1906,1909, including \citet{Feltre+2016, Jaskot+2016, Byler+2018}. In \citet{Byler+2018}, we highlighted the potential of the Si3C3 \vs O3C3 diagnostic diagram, which uses the \SiuIII$\lambda$1883, \ciii$\lambda$1906, and \oiii$\lambda$1666 emission lines. These emission lines are relatively bright and easy to detect, and are closely spaced in wavelength to minimize dust extinction errors.
 
 In the left panel of Fig.~\ref{fig:UVC} we show the Si3C3-O3C3 diagnostic diagram as presented in \citet{Byler+2018}. We compare the model grid with the local BCDs from \citet{Berg+2016} (gold circles), and the high redshift \mage galaxies from \citet{Rigby+2018b} (diamonds). As noted in \citet{Byler+2018}, the model grid is able to reproduce the observed range of line ratios in samples of both low and high-redshift galaxies.
 
@@ -376,7 +391,7 @@ The UV and optical metallicities agree within error for ${\sim}80\%$ of the \cit
 \end{figure*}
 %-------------------------------------------------------
 
-\subsection{Diagnostics using \heii$\lambda$1640}\label{sec:UVOpt:He}
+\subsubsection{Diagnostics using \heii$\lambda$1640}\label{sec:UVOpt:He}
 
 \heii$\lambda$1640 emission has been detected in both local and high-redshift galaxies and is one of the brighter UV emission lines, making it another desirable line to use in a metallicity diagnostic. The \heii$\lambda$1640 line has been used in several proposed emission line diagnostics \citep[e.g.,][]{Jaskot+2016, Feltre+2016}, including the He2C3-O3C3 diagnostic presented in \citet{Byler+2018}, which uses the \heii$\lambda$1640, \ciii$\lambda$1906, and \oiii$\lambda$1666 emission lines. In \citet{Byler+2018}, however, we did note that observations of \heii$\lambda$1640 emission can include contributions from both nebular emission and stellar wind emission, making it a potentially problematic metallicity tracer.
 
@@ -398,12 +413,12 @@ We discuss the issues associated with diagnostics that use \civ, \ciii, or \heii
 \end{figure*}
 %-------------------------------------------------------
 
-\subsection{Diagnostics using \civ$\lambda$1548,1550}\label{sec:UVOpt:CIV}
+\subsubsection{Diagnostics using \civ$\lambda$1548,1550}\label{sec:UVOpt:CIV}
 
-We show the \civ$1548,1550$\ang / \oiii$1666$\ang \vs \oiii$1666$\ang / \ciii$1906,1908$\ang (C4O3 - O3C3) diagnostic diagram in the left panel of Fig.~\ref{fig:UVCIV}. Most of the galaxies from the observational comparison sample have larger C4O3 ratios than predicted by the models. At the metallicities associated with the local BCD sample ($12+\logOH \sim 7.5-8$), the stellar+nebular \civ emission models from \citet{Byler+2018} predict that stellar contamination can change the C4O3 ratio by 0.1-0.3\,dex. Contamination from stellar emission is less of an issue for the galaxies from \citet{Senchyna+2017} (red points), since the higher spectral resolution of the observations allowed the authors to fit for both the broad and narrow \civ emission components. 
+We show the \civ$1548,1550$\ang / \oiii$1666$\ang \vs \oiii$1666$\ang / \ciii$1906,1908$\ang (C4O3 - O3C3) diagnostic diagram in the left panel of Fig.~\ref{fig:UVCIV}. Most of the galaxies from the observational comparison sample have larger C4O3 ratios than predicted by the models. At the metallicities associated with the local BCD sample ($12+\logOH \sim 7.5-8$), the stellar+nebular \civ emission models from \citet{Byler+2018} predict that stellar contamination can change the C4O3 ratio by 0.1-0.3\,dex. Contamination from stellar emission is less of an issue for the galaxies from \citet{Senchyna+2017} (red points), since the higher spectral resolution of the observations allowed the authors to fit for both the broad and narrow \civ emission components.
 We show the comparison between UV and optical metallicities for the C4O3-O3C3 diagnostic in the right panel of Fig.~\ref{fig:UVCIV}. Unsurprisingly, the mismatch between observed and model line ratios in the left panel of Fig.~\ref{fig:UVCIV} translates to poor agreement between the UV and optical metallicities in the right panel. For all objects, the UV metallicity is larger than the optical metallicity, by 0.1 to 0.7\,dex, and an average offset of 0.3\,dex. Only three objects have UV metallicities consistent with their optical estimates within the errors. There is some evidence for a metallicity-dependent offset, where the metal-rich objects show somewhat more scatter. The \citet{Senchyna+2017} galaxies show the smallest offset, potentially due to the fact that the C4 emission line fluxes are ``nebular only''. More generally, the C4O3-O3C3 emission line ratios seem to be a poor metallicity diagnostic.
 
-We note the absence of the \mage galaxies in Fig.~\ref{fig:UVCIV}. Inspection of the \civ emission feature in these comparatively metal-rich objects revealed strong stellar emission with the signature P-Cygni profile, with little or no evidence for nebular emission. 
+We note the absence of the \mage galaxies in Fig.~\ref{fig:UVCIV}. Inspection of the \civ emission feature in these comparatively metal-rich objects revealed strong stellar emission with the signature P-Cygni profile, with little or no evidence for nebular emission.
 
 %-------------------------------------------------------
 % Figure 5:
@@ -417,9 +432,9 @@ We note the absence of the \mage galaxies in Fig.~\ref{fig:UVCIV}. Inspection of
 \end{figure*}
 %-------------------------------------------------------
 
-\subsection{Diagnostics using silicon and oxygen lines}\label{sec:UVOpt:SiO}
+\subsubsection{Diagnostics using silicon and oxygen lines}\label{sec:UVOpt:SiO}
 
-There are plenty of emission line diagnostics that do not include \civ, \ciii, or \heii lines that may provide a more robust estimate of the gas phase metallicity. Unfortunately, the \citet{Berg+2016} sample only includes emission line measurements for \civ, \heii, \oiii, \SiuIII, and \ciii, which means that this sample cannot be used to calibrate any of the non-carbon, non-helium UV diagnostics. For these diagnostics, we must rely on the \mage sample for UV-optical comparisons. 
+There are plenty of emission line diagnostics that do not include \civ, \ciii, or \heii lines that may provide a more robust estimate of the gas phase metallicity. Unfortunately, the \citet{Berg+2016} sample only includes emission line measurements for \civ, \heii, \oiii, \SiuIII, and \ciii, which means that this sample cannot be used to calibrate any of the non-carbon, non-helium UV diagnostics. For these diagnostics, we must rely on the \mage sample for UV-optical comparisons.
 
 UV-optical comparisons using the \mage sample will differ in two important ways. First, only seven of the 13 \mage galaxies studied here have optical metallicity measurements, and only two of these seven have four or more non-carbon, non-helium emission line detections, to compare with diagnostic diagrams. Second, the optical metallicities from the \mage sample are from empirically calibrated strong-line methods like $R_{23}$ or O3N2, rather than the more robust direct-\Te method metallicities from the \citet{Berg+2016} sample. Nonetheless, these galaxies provide a crucial link between UV and optical abundance determinations, and even upper limits can provide a useful quantitative calibration.
 
@@ -427,7 +442,11 @@ In this work we analyze 12 UV diagnostic diagrams that do not include carbon lin
 
 In Fig.~\ref{fig:UVSiO} we highlight four of these diagnostic diagrams. The diagnostics in Fig.~\ref{fig:UVSiO} have the same line ratio on the $x$-axis, \SiuII$\lambda$1307 / \SiuII$\lambda$1531 (Si2Si2), and on the $y$-axis we show \SiuIII$\lambda$1883 / \oii$\lambda$2471  (Si3O2; top left), \SiuIII$\lambda$1883 / \nii$\lambda$2142 (Si3N2; top right), \oii$\lambda$2471 / \oiii$\lambda$1666 (O2O3; bottom left), and \niii$\lambda$1750 / \nii$\lambda$2142 (N3N2; bottom right). Each diagnostic in Fig.~\ref{fig:UVSiO} is compared with \mage galaxy observations from \citet{Rigby+2018b} (coloured diamonds) for objects where all four emission lines were detected. In all diagrams, the model grids are able to reproduce the observed range in emission line ratios, within error.
 
-The \mage galaxies have higher metallicities than the \citet{Berg+2016} sample of galaxies (\logOH${\sim}8.5$, compared to \logOH${\sim}7.5$), and in general, the \mage galaxies in Fig.~\ref{fig:UVSiO} do occupy regions of the model grid associated with higher metallicities. Additionally, galaxies that appear in multiple panels of Fig.~\ref{fig:UVSiO} are generally found in consistent regions of the \logU$-$\logZ model grid. 
+The \mage galaxies have higher metallicities than the \citet{Berg+2016} sample of galaxies (\logOH${\sim}8.5$, compared to \logOH${\sim}7.5$), and in general, the \mage galaxies in Fig.~\ref{fig:UVSiO} do occupy regions of the model grid associated with higher metallicities. Additionally, galaxies that appear in multiple panels of Fig.~\ref{fig:UVSiO} are generally found in consistent regions of the \logU$-$\logZ model grid.
+
+
+
+
 
 Our evaluation of the diagnostics from Table~\XXX will proceed along two paths. First, using the larger sample of \mage galaxies, we will determine if metallicities derived using different UV diagnostics are consistent with one another. Second, we will compare the UV and optical metallicities for RCS0327 and S1527, the two \mage galaxies with both UV and optical metallicities.
 
@@ -443,7 +462,27 @@ Our evaluation of the diagnostics from Table~\XXX will proceed along two paths. 
 \end{figure*}
 %-------------------------------------------------------
 
-\subsubsection{Comparison between different UV diagnostics}\label{sec:UVOpt:UV}
+In Fig.~\ref{fig:UVZ} we compare the optical metallicity of RCS0327 and S1527 to various UV metallicities, as derived using different diagnostics. The optical metallicity is shown on the $x$-axis, while the UV metallicity is shown on the $y$-axis. The marker color indicates the specific UV diagnostic used, labeled on the color bar. While RCS0327 has a single optical metallicity measurement, the rest-UV spectroscopy targets multiple spatial locations corresponding to several distinct star-forming knots. We separate the knots (E,G, U) on the $x$-axis of Fig.~\ref{fig:UVZ} for visual clarity, with an offset of $\pm 0.1$\,dex from the globally averaged optical metallicity, shown at the location of knot-G. The knots are also separated because, in principle, the gas properties could vary significantly between knots. We leave this analysis to a future publication, Byler et al., \emph{in prep}.
+
+We can see from Fig.~\ref{fig:UVZ} that the UV-derived metallicities are consistent with the optical metallicities, within error. The consistency between the UV and optical metallicities in Fig~\ref{fig:UVZ} may indicate that UV diagnostics using silicon and oxygen lines are more robust than those using carbon or helium emission lines.
+
+In general, the various UV metallicities for each object agree with one another, with a scatter of 0.2-0.3\,dex. However, as discussed in \S\ref{sec:UVOpt:UV}, some of the diagnostics provide less reliable metallicity estimates. We found that the Si2Si2-Si2Si3 diagnostic (light blue diamonds in Fig.~\ref{fig:UVZ}) produced metallicities that were systematically higher than other diagnostics. The Si2Si2-Si2Si3 lines were all observable in RCS0327-U and S1527, shown in Fig.~\ref{fig:UVZ}. For RCS0327 the Si2Si2-Si2Si3 metallicity shows the largest offset from the optical metallicity, more than 0.5\,dex. For S1527, the Si2Si2-Si2Si3 diagnostic predicts a metallicity at the upper limit set by the optical \nii/\ha ratio. In both cases, it is reasonable to claim that the Si2Si2-Si2Si3 metallicity is biased to systematically high metallicities.
+
+The best of the diagnostics identified in \S\ref{sec:UVOpt:UV} included Si2Si2-O3Si3 (bright green), Si2O3-Si3O2 (brown), Si2Si2-N3Si3 (pale orange), and Si2Si2-O2O3 (pale red). In Fig.~\ref{fig:UVZ}, these diagnostics show very little scatter in individual objects, (e.g., the pale red and bright green diamonds for knot-G), by design. We also note that these diagnostics provide the closest match to the measured optical metallicity in several objects, which is encouraging.
+
+%-------------------------------------------------------
+% Figure 7:
+%-------------------------------------------------------
+\begin{figure*}
+  \begin{center}
+    \includegraphics[width=\linewidth]{figs/f7.png}
+    \caption{UV metallicities ($y$-axis) derived from various diagnostic diagrams compared to the optical metallicity ($x$-axis). Marker color indicates the different emission line ratios used, and the red dashed line shows a one-to-one relation. RCS0327 has a single optical metallicity measurement spatially averaged over the face of the galaxy, but rest-UV spectra that cover several different spatial locations (e.g., U,G,E,B), which have been shifted on the $x$-axis for visual clarity. The optical metallicity for S1527 only provides an upper limit.}
+    \label{fig:UVZ}
+  \end{center}
+\end{figure*}
+%-------------------------------------------------------
+
+\subsection{UV-UV abundance comparisons}\label{sec:UVOpt:UV}
 
 We quantify the robustness of the UV metallicities by looking for consistent predictions between different UV diagnostics. For this consistency check, we use the 12 UV diagnostics identified in Table~\XXX.
 
@@ -468,28 +507,6 @@ Only one galaxy has observed \mgii$\lambda$2796 emission. The diagnostic that in
     \includegraphics[width=\linewidth]{figs/f6.png}
     \caption{Consistency between UV-derived metallicities. We show the gas phase oxygen abundance ($12+$\logOH) measured with twelve different UV-diagnostics, as labeled on the outer edges of the figure. The diagnostic labeled on each row is plotted on the $x$-axis, while the diagnostic labeled on the columns is plotted on the $y-$axis. \mage galaxies are shown with colored diamonds and the red dashed line shows a one-to-one relationship. The \SiuII$\lambda$1307/\SiuII$\lambda$1531 \vs \oiii$\lambda$1666/\SiuIII$\lambda$1883 diagnostic (the third row, $x$-axis and the fourth column, $y$-axis) predicts metallicities that are consistent with most other diagnostics. In contrast, the \SiuII$\lambda$1307/\SiuII$\lambda$1531 \vs \SiuII$\lambda$1307/\SiuIII$\lambda$1883 diagnostic (first column, $y$-axis) predicts metallicities that are systematically higher than other diagnostics.}
     \label{fig:UVUV}
-  \end{center}
-\end{figure*}
-%-------------------------------------------------------
-
-\subsubsection{UV-Optical metallicity comparison}\label{sec:UVOpt:Opt}
-
-In Fig.~\ref{fig:UVZ} we compare the optical metallicity of RCS0327 and S1527 to various UV metallicities, as derived using different diagnostics. The optical metallicity is shown on the $x$-axis, while the UV metallicity is shown on the $y$-axis. The marker color indicates the specific UV diagnostic used, labeled on the color bar. While RCS0327 has a single optical metallicity measurement, the rest-UV spectroscopy targets multiple spatial locations corresponding to several distinct star-forming knots. We separate the knots (E,G, U) on the $x$-axis of Fig.~\ref{fig:UVZ} for visual clarity, with an offset of $\pm 0.1$\,dex from the globally averaged optical metallicity, shown at the location of knot-G. The knots are also separated because, in principle, the gas properties could vary significantly between knots. We leave this analysis to a future publication, Byler et al., \emph{in prep}.
-
-We can see from Fig.~\ref{fig:UVZ} that the UV-derived metallicities are consistent with the optical metallicities, within error. The consistency between the UV and optical metallicities in Fig~\ref{fig:UVZ} may indicate that UV diagnostics using silicon and oxygen lines are more robust than those using carbon or helium emission lines.
-
-In general, the various UV metallicities for each object agree with one another, with a scatter of 0.2-0.3\,dex. However, as discussed in \S\ref{sec:UVOpt:UV}, some of the diagnostics provide less reliable metallicity estimates. We found that the Si2Si2-Si2Si3 diagnostic (light blue diamonds in Fig.~\ref{fig:UVZ}) produced metallicities that were systematically higher than other diagnostics. The Si2Si2-Si2Si3 lines were all observable in RCS0327-U and S1527, shown in Fig.~\ref{fig:UVZ}. For RCS0327 the Si2Si2-Si2Si3 metallicity shows the largest offset from the optical metallicity, more than 0.5\,dex. For S1527, the Si2Si2-Si2Si3 diagnostic predicts a metallicity at the upper limit set by the optical \nii/\ha ratio. In both cases, it is reasonable to claim that the Si2Si2-Si2Si3 metallicity is biased to systematically high metallicities.
-
-The best of the diagnostics identified in \S\ref{sec:UVOpt:UV} included Si2Si2-O3Si3 (bright green), Si2O3-Si3O2 (brown), Si2Si2-N3Si3 (pale orange), and Si2Si2-O2O3 (pale red). In Fig.~\ref{fig:UVZ}, these diagnostics show very little scatter in individual objects, (e.g., the pale red and bright green diamonds for knot-G), by design. We also note that these diagnostics provide the closest match to the measured optical metallicity in several objects, which is encouraging.
-
-%-------------------------------------------------------
-% Figure 7:
-%-------------------------------------------------------
-\begin{figure*}
-  \begin{center}
-    \includegraphics[width=\linewidth]{figs/f7.png}
-    \caption{UV metallicities ($y$-axis) derived from various diagnostic diagrams compared to the optical metallicity ($x$-axis). Marker color indicates the different emission line ratios used, and the red dashed line shows a one-to-one relation. RCS0327 has a single optical metallicity measurement spatially averaged over the face of the galaxy, but rest-UV spectra that cover several different spatial locations (e.g., U,G,E,B), which have been shifted on the $x$-axis for visual clarity. The optical metallicity for S1527 only provides an upper limit.}
-    \label{fig:UVZ}
   \end{center}
 \end{figure*}
 %-------------------------------------------------------
@@ -519,7 +536,7 @@ Fig.~\ref{fig:UVmage} shows the "final" UV metallicity calculated for each of th
   \end{center}
 \end{figure*}
 %-------------------------------------------------------
-
+\section{Caveats}\label{sec:caveats}
 
 \section{Discussion}\label{sec:discussion}
 
@@ -599,7 +616,7 @@ Also: From \citet{Berg+2018} Our log(Si/O) measurement for SL2S0217 is remarkabl
 \begin{enumerate}
     \item We have confirmed that UV and optical direct-temperature oxygen abundances agree within 0.1-0.2dex. The UV direct-\Te abundances are systematically lower than the optical-\Te abundances by 0.1 dex, which increases to a 0.2\,dex offset at solar and super-solar metallicities.
     \item UV metallicity diagnostics that include the \ciii$\lambda$1906,1909 emission lines do not reliably correlate with optical metallicities. We suggest that this is likely driven the presence of shock heated gas in addition to variations in C/O at fixed oxygen abundance.
-    \item UV diagnostics that include the \civ$\lambda$1548,1550 emission lines are unreliable metallicity indicators. We suggest that this is primarily driven by the contamination from stellar emission, though interpretation is further complicated by strong interstellar absorption just blueward of the emission feature. 
+    \item UV diagnostics that include the \civ$\lambda$1548,1550 emission lines are unreliable metallicity indicators. We suggest that this is primarily driven by the contamination from stellar emission, though interpretation is further complicated by strong interstellar absorption just blueward of the emission feature.
     \item UV diagnostics that include the \heii$\lambda$1640 emission line are reliable metallicity indicators at metallicities below $12+\logOH \sim 8$. At higher metallicities ($12+\logOH \sim 8.5$), discrepant abundances likely arise from contamination by stellar \heii emission.
     \item UV diagnostics that consist of ratios of silicon, oxygen, and nitrogen emission lines spanning multiple ionization states provide the most reliable metallicity estimates, like \SiuII$\lambda$1307/\SiuII$\lambda$1531 \vs \oiii$\lambda$1666/\SiuIII$\lambda$1883. Other promising diagnostics include \SiuII$\lambda$1307/\oiii$\lambda$1666 \vs \SiuIII$\lambda$1883/\oii$\lambda$2471, \SiuII$\lambda$1307/\SiuII$\lambda$1531 \vs \niii$\lambda$1750/\SiuIII$\lambda$1883, and \SiuII$\lambda$1307/\SiuII$\lambda$1531 \vs \oii$\lambda$2471/\oiii$\lambda$1666.
     \item Using the \mage galaxy sample, we demonstrate that metallicities derived using the above diagnostics are consistent with optical metallicities derived using empirically calculated strong line indices. Additionally, the metallicities derived using these diagnostics are consistent with metallicities derived using other UV diagnostics.
