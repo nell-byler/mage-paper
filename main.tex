@@ -1,5 +1,4 @@
 \documentclass[preprint2]{aastex62}
-%\documentclass[trackchanges, preprint2]{aastex62}
 \graphicspath{ {./figs/} }
 \usepackage{xspace, url, amsmath, multirow}
 %%
@@ -63,7 +62,6 @@
 \newcommand{\Te}{\ensuremath{T_{\mathrm{e}}}\xspace}
 \newcommand{\XXX}{{\bf \color{red}{XXX} }}
 \newcommand{\SN}{\ensuremath{\mathrm{S}/\mathrm{N}}\xspace}
-%\newcommand{\XXX}[1]{\colorbox{red}{#1}}
 %%
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
@@ -73,9 +71,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %\received{July 1, 2016}
-\revised{\today}
-%\accepted{\today}
-%\submitjournal{ApJ}
+%\revised{\today}
+\submitjournal{The Astrophysical Journal}
+\accepted{March 9, 2020}
+
 %%
 \shorttitle{}
 \shortauthors{Byler et al.}
@@ -127,11 +126,11 @@ Our ability to study the properties of the interstellar medium (ISM) in the earl
 
 \section{Introduction} \label{sec:intro}
 
-Quantifying the build-up of stellar mass and metals in galaxies over cosmic time is critical in understanding how galaxies form and evolve. Changes in mass and metallicity are intertwined through the star formation process, as gas is converted into stars and subsequently enriched within stars through nucleosynthetic processes. Some of this enriched gas is eventually expelled via stellar winds or supernovae (SNe), and thereby returned to the interstellar medium (ISM). As star formation continues and this enrichment process repeats, the metal content of the galaxy increases \citep[e.g.,][]{Nomoto+2013}. % Add in Pettini+2006?
+Quantifying the build-up of stellar mass and metals in galaxies over cosmic time is critical in understanding how galaxies form and evolve. Changes in mass and metallicity are intertwined through the star formation process, as gas is converted into stars and subsequently enriched within stars through nucleosynthetic processes. Some of this enriched gas is eventually expelled via stellar winds or supernovae (SNe), and thereby returned to the interstellar medium (ISM). As star formation continues and this enrichment process repeats, the metal content of the galaxy increases \citep[e.g.,][]{Nomoto+2013}.
 
 The specific pattern of elemental abundances in a given galaxy depends on the history of star formation \citep{Pagel+1995}. In turn, the duration and efficiency of star formation depends on both the availability of gas and its ability to collapse and form stars. For a given gas cloud, the balance between gravity and thermal pressure is mediated by the temperature, density, and chemical composition of the gas itself \citep[][]{Evans+1999}. Thus, understanding the mechanisms that drive and sustain star formation relies on our ability to measure the physical properties of the ISM (see recent reviews by \citealt{Peimbert+2017}; \citealt{Maiolino+2018}; \citealt{Kewley+2019ARAA}; and references therein).
 
-Fortunately, emission from ionized gas (nebular emission) in galaxies is easily observable via bright emission lines such as the hydrogen recombination transitions (e.g., \ha) and the radiative de-excitation of collisionally excited metal ions (e.g., \oiii\,$\lambda$\,5007). These emission lines encode information about dust attenuation and the local gas conditions, including the temperature, chemical composition, density, and ionization state of the gas. We can extract the properties of the ISM by comparing the relative strengths of various emission lines with predictions from atomic physics \citep[e.g.,][]{Sargent+1970, Searle+1972, Pagel+1979, McKee+1977, McGaugh+1991, Zaritsky+1994, Kewley+2002, Pilyugin+2005, Berg+2015}. % using emission lines to get abundances etc
+Fortunately, emission from ionized gas (nebular emission) in galaxies is easily observable via bright emission lines such as the hydrogen recombination transitions (e.g., \ha) and the radiative de-excitation of collisionally excited metal ions (e.g., \oiii\,$\lambda$\,5007). These emission lines encode information about dust attenuation and the local gas conditions, including the temperature, chemical composition, density, and ionization state of the gas. We can extract the properties of the ISM by comparing the relative strengths of various emission lines with predictions from atomic physics \citep[e.g.,][]{Sargent+1970, Searle+1972, Pagel+1979, McKee+1977, McGaugh+1991, Zaritsky+1994, Kewley+2002, Pilyugin+2005, Berg+2015}.
 
 Ratios of emission lines that have proven to be particularly sensitive to properties like metallicity or density are called ``emission line diagnostics''. The best-known emission line diagnostics use transitions at optical wavelengths. There is a long history of using these emission line diagnostics to constrain the physical properties of the ISM in galaxies with redshifts between $0<z<4$ \citep[e.g.,][and many others]{Tremonti+2004, Erb+2006, Brinchmann+2008, Shapley+2011, Steidel+2014, Zahid+2014, Bian+2017}. 
 
@@ -418,7 +417,7 @@ We then rescale the metallicity using the theoretical abundance calibrations der
 The calculated gas-phase oxygen abundances for the observational comparison sample are given in Table~\ref{tab:logOH}.
 
 \startlongtable
-% keep this above
+% not worth my time to automate this. just manually replace.
 %%
 % manually fix Horseshoe > Cosmic Horseshoe, remove S0004-0103 alongslit
 % change from 0 to 10 for Senchyna+19
